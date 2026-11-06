@@ -1,5 +1,5 @@
 // 九州行動手冊 離線快取（Service Worker）
-const CACHE = "kyushu-v33";
+const CACHE = "kyushu-v34";
 const ASSETS = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (e) => {

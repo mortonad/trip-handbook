@@ -1,0 +1,16 @@
+{
+  "name": "九州行動手冊",
+  "short_name": "九州手冊",
+  "description": "福岡・小倉五日自由行手機行程：時間表、地圖、電話、清單",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fcfaf6",
+  "theme_color": "#b4442b",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -110,6 +110,7 @@ details.ac[open]>summary::after{content:"−"}
 .acbody{padding:0 15px 14px;font-size:15px}
 .acbody p{margin:7px 0}.acbody ul{margin:7px 0;padding-left:20px}.acbody li{margin:5px 0}
 .jp{background:var(--bg);border-radius:12px;padding:10px 12px;margin:8px 0}
+.jph{font-weight:800;font-size:15.5px;margin:18px 0 6px;color:var(--acc2)}
 .jp b{font-size:16px}.jp .ro{display:block;color:var(--acc2);font-size:13.5px;margin:1px 0}.jp .zh{display:block;color:var(--soft);font-size:13.5px}
 .step{display:grid;grid-template-columns:26px 1fr;gap:10px;margin:8px 0}
 .step .n{width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
@@ -316,14 +317,59 @@ const PLAY=[
 ];
 
 const JP=[
- ["予約をお願いしたいのですが。","yo-ya-ku o o-ne-ga-i shi-ta-i no de-su ga","我想預約。"],
- ["○時から 2名でお願いできますか？","...ji ka-ra, ni-mei de o-ne-ga-i de-ki-ma-su ka","○點、兩位可以嗎？"],
- ["日本語があまり話せません。ゆっくりお願いします。","ni-hon-go ga a-ma-ri ha-na-se-ma-sen. yu-k-ku-ri o-ne-ga-i shi-ma-su","我日文不好，請說慢一點。"],
- ["大丈夫です。","da-i-jo-u-bu de-su","不用，謝謝（結帳萬用句）。"],
- ["袋はいりません。","fu-ku-ro wa i-ri-ma-se-n","不要袋子。"],
- ["温めてください。","a-ta-ta-me-te ku-da-sa-i","幫我加熱。"],
- ["現金で。","ge-n-ki-n de","付現金。"],
+ ["① 萬用救命 5 句（只背這些也能活）",null,""],
+ ["すみません","su-mi-ma-sen","不好意思／借過／叫店員（最常用）"],
+ ["日本語わかりません","ni-hon-go wa-ka-ri-ma-sen","我不懂日文"],
+ ["英語わかりますか？","ei-go wa-ka-ri-ma-su ka","會英文嗎？"],
+ ["これ、ください","ko-re ku-da-sa-i","我要這個（指著點最快）"],
+ ["大丈夫です","dai-jo-bu de-su","不用了／沒關係（擋推銷萬用句）"],
+ ["② 餐廳（每天都用）",null,""],
+ ["二人です","fu-ta-ri de-su","兩位"],
+ ["予約していません","yo-ya-ku shi-te i-ma-sen","我們沒有預約"],
+ ["何分待ちますか？","nan-pun ma-chi-ma-su ka","要等幾分鐘？"],
+ ["生ものは食べられません","na-ma-mo-no wa ta-be-ra-re-ma-sen","⭐我不能吃生的（你們最重要的一句）"],
+ ["よく焼いてください","yo-ku ya-i-te ku-da-sa-i","請煮熟一點"],
+ ["おすすめは何ですか？","o-su-su-me wa nan de-su ka","推薦什麼？"],
+ ["お会計お願いします","o-kai-kei o-ne-gai shi-ma-su","結帳"],
+ ["（店員）何名様ですか？","nan-mei-sa-ma de-su ka","店員問：幾位？→ 答「二人です」"],
+ ["（店員）少々お待ちください","sho-sho o-ma-chi ku-da-sa-i","店員說：請稍等"],
+ ["（店員）満席です","man-se-ki de-su","店員說：客滿了"],
+ ["③ 搭車・問路",null,""],
+ ["ここに行きたいです","ko-ko ni i-ki-ta-i de-su","我想去這裡（配手機地圖指給他看，最有效）"],
+ ["この電車は〜に行きますか？","ko-no den-sha wa 〜 ni i-ki-ma-su ka","這班車有到〜嗎？"],
+ ["何番乗り場ですか？","nan-ban no-ri-ba de-su ka","幾號月台／乘車處？"],
+ ["次は何時ですか？","tsu-gi wa nan-ji de-su ka","下一班幾點？"],
+ ["（站員）〜番線です","〜 ban-sen de-su","站員說：〜號月台"],
+ ["（站員）乗り換えです","no-ri-ka-e de-su","站員說：要換車"],
+ ["④ 飯店（D1・D3・D5）",null,""],
+ ["チェックインお願いします","chek-ku-in o-ne-gai shi-ma-su","我要辦入住"],
+ ["荷物を預かってもらえますか？","ni-mo-tsu o a-zu-kat-te mo-ra-e-ma-su ka","⭐可以寄放行李嗎？（D3 搬福岡・D5 退房後）"],
+ ["何時までですか？","nan-ji ma-de de-su ka","可以放到幾點？"],
+ ["チェックアウトです","chek-ku-a-u-to de-su","我要退房"],
+ ["⑤ 購物・尺寸・免稅（D1 買裝備・D5 伴手禮）",null,""],
+ ["試着できますか？","shi-cha-ku de-ki-ma-su ka","⭐可以試穿嗎？"],
+ ["大きいサイズありますか？","o-o-ki-i sa-i-zu a-ri-ma-su ka","⭐有大尺碼嗎？"],
+ ["これのXLください","ko-re no XL ku-da-sa-i","這個要 XL"],
+ ["免税できますか？","men-zei de-ki-ma-su ka","可以免稅嗎？"],
+ ["現金で返金できますか？","gen-kin de hen-kin de-ki-ma-su ka","可以退現金嗎？（退稅挑 0% 手續費店）"],
+ ["袋いりません","fu-ku-ro i-ri-ma-sen","不用袋子"],
+ ["（店員）ポイントカードはお持ちですか？","poin-to ka-a-do wa o-mo-chi de-su ka","店員問：有集點卡嗎？→ 答「大丈夫です」"],
+ ["⑥ 屋台・市場（D4 中洲屋台）",null,""],
+ ["一人前いくらですか？","i-chi-nin-mae i-ku-ra de-su ka","一人份多少錢？"],
+ ["現金だけですか？","gen-kin da-ke de-su ka","只收現金嗎？"],
+ ["メニューありますか？","me-nyu- a-ri-ma-su ka","有菜單嗎？"],
+ ["相席でもいいです","ai-se-ki de-mo i-i de-su","併桌也可以（屋台常要併桌）"],
+ ["⑦ 出狀況・求助",null,""],
+ ["道に迷いました","mi-chi ni ma-yo-i-ma-shi-ta","我迷路了"],
+ ["助けてください","ta-su-ke-te ku-da-sa-i","請幫幫我"],
  ["トイレはどこですか？","to-i-re wa do-ko de-su ka","廁所在哪裡？"],
+ ["病院はどこですか？","byo-in wa do-ko de-su ka","醫院在哪裡？"],
+ ["⑧ 訂位／電話（備用）",null,""],
+ ["予約をお願いしたいのですが","yo-ya-ku o o-ne-gai shi-ta-i no de-su ga","我想預約"],
+ ["○時から 2名でお願いできますか？","...ji ka-ra, ni-mei de o-ne-gai de-ki-ma-su ka","○點、兩位可以嗎？"],
+ ["ゆっくりお願いします","yu-k-ku-ri o-ne-gai shi-ma-su","請說慢一點"],
+ ["温めてください","a-ta-ta-me-te ku-da-sa-i","幫我加熱（超商便當）"],
+ ["現金で","gen-kin de","付現金"],
 ];
 
 const UTIL=[
@@ -382,7 +428,7 @@ const UTIL=[
    <div class="step"><div class="n">3</div><div>沒網就手動設 APN（照 Fastmove 說明書），<b>打開數據漫遊</b></div></div>
    <div style="margin-top:10px"><b>🆘 備用 eSIM（旅伴 S24，平常別碰）</b></div>
    <div class="step"><div class="n">!</div><div><b>平常別掃</b>；實體卡收訊不行才掃：設定 → 連線 → SIM 卡管理員 → 新增 eSIM → 掃 QR → 設數據 → 開漫遊</div></div>`},
- {h:"打電話／結帳日文（- 分音）",img:"izakaya",jp:true},
+ {h:"日文速成（分場景・- 分音）",img:"izakaya",jp:true},
  {h:"NG 禁忌",img:"shofukuji",html:`<ul>
    <li><b>護照隨身</b>：沒帶最高罰 ¥10 萬，手機拍照備份</li>
    <li>天神／博多站周邊<b>路上禁煙</b>，要到喫煙所</li>
@@ -519,7 +565,7 @@ function renderUtil(){
  for(const s of UTIL){
    const d=el("details","ac");const sm=el("summary");sm.innerHTML=(s.img&&PHOTOS[s.img]?`<img class="hthumb" src="${PHOTOS[s.img]}" alt="">`:"")+`<span style="flex:1">${esc(s.h)}</span>`;d.appendChild(sm);
    const b=el("div","acbody");
-   if(s.jp){for(const [j,r,z] of JP)b.appendChild(el("div","jp",`<b>${esc(j)}</b><span class="ro">${esc(r)}</span><span class="zh">${esc(z)}</span><a class="btn trn" style="margin-top:7px" target="_blank" rel="noopener" href="https://translate.google.com/?sl=ja&tl=zh-TW&op=translate&text=${encodeURIComponent(j)}">${SVG.info} 開翻譯／念給店員聽</a>`));}
+   if(s.jp){for(const [j,r,z] of JP){if(r===null){b.appendChild(el("div","jph",esc(j)));continue;}b.appendChild(el("div","jp",`<b>${esc(j)}</b><span class="ro">${esc(r)}</span><span class="zh">${esc(z)}</span><a class="btn trn" style="margin-top:7px" target="_blank" rel="noopener" href="https://translate.google.com/?sl=ja&tl=zh-TW&op=translate&text=${encodeURIComponent(j)}">${SVG.info} 開翻譯／念給店員聽</a>`));}}
    else if(s.credits){b.innerHTML=PHOTOCREDITS.map(c=>`<p class="cred">照片：<a href="${c.desc}" target="_blank" rel="noopener">${esc(c.title)}</a>　© ${esc(c.artist)} ／ ${esc(c.license)}</p>`).join("")+'<p class="cred">以上皆取自 Wikimedia Commons 的 CC 授權圖，已依授權標示作者與條款。</p>';}
    else b.innerHTML=s.html;
    d.appendChild(b);m.appendChild(d);
